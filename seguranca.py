@@ -44,10 +44,7 @@ def analisar_risco_injecao(texto_usuario):
         )
         
         resultado = resp.choices[0].message.content.upper()
-        
-        # LÓGICA CORRIGIDA PARA O MAIN.PY
-        # Se o Sentinel disser que é MALICIOSO, retornamos False (Não é seguro)
-        # Se disser SEGURO, retornamos True (É seguro)
+
         if "MALICIOSO" in resultado:
             return False 
         return True
